@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">weather_1</string>
+    <string name="seven_day_forecast">Прогноз на 7 дней</string>
+</resources>
