@@ -4,6 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -13,7 +17,7 @@ import com.example.weather_1.common.Constants.Companion.ICON_PATH
 import com.example.weather_1.domain.model.Daily
 
 @Composable
-fun ForecastCard(day: Daily) {
+fun ForecastCard(day: Daily, onClick: ()-> Unit) {
 
     Card(
         shape = RoundedCornerShape(8.dp),
@@ -36,12 +40,16 @@ fun ForecastCard(day: Daily) {
                contentDescription = null,
                modifier = Modifier.size(70.dp)
            )
+           IconButton(modifier = Modifier.
+           then(Modifier.size(24.dp)),
+               onClick = onClick) {
+               Icon(
+                   Icons.Filled.MoreVert,
+                   "contentDescription",
+                   tint = Color.White)
+           }
        }
     }
-
-
 }
-
-
 
 
